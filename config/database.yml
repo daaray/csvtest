@@ -1,0 +1,15 @@
+development:
+  adapter: mysql
+  database: csvtest_dev
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+test: &test 
+  adapter: mysql
+  database: csvtest_test
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
