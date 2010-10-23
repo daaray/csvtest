@@ -1,0 +1,33 @@
+<%= form_for(@scheduled_post) do |f| %>
+  <% if @scheduled_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scheduled_post.errors.count, "error") %> prohibited this scheduled_post from being saved:</h2>
+
+      <ul>
+      <% @scheduled_post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :reenactment_id %><br />
+    <%= f.text_field :reenactment_id %>
+  </div>
+  <div class="field">
+    <%= f.label :character_id %><br />
+    <%= f.text_field :character_id %>
+  </div>
+  <div class="field">
+    <%= f.label :postdate %><br />
+    <%= f.text_field :postdate %>
+  </div>  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

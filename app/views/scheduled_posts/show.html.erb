@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @scheduled_post.content %>
+</p>
+
+<p>
+  <b>Reenactment:</b>
+  <%= @scheduled_post.reenactment_id %>
+</p>
+
+<p>
+  <b>character:</b>
+  <%= @scheduled_post.character_id %>
+</p>
+
+<p>
+  <b>postdate:</b>
+  <%= @scheduled_post.postdate %>
+</p>
+
+<%= link_to 'Edit', edit_scheduled_post_path(@scheduled_post) %> |
+<%= link_to 'Back', scheduled_posts_path %>

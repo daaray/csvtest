@@ -1,4 +1,15 @@
 Csvtest::Application.routes.draw do
+  get "csv/import"
+  post "csv/import" => 'csv#upload'
+
+  resources :scheduled_posts
+
+  resources :reenactments
+
+  resources :characters
+
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

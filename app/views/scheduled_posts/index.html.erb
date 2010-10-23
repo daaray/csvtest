@@ -1,0 +1,29 @@
+<h1>Listing scheduled_posts</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Reenactment</th>
+    <th>character</th>
+    <th>Post Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scheduled_posts.each do |scheduled_post| %>
+  <tr>
+    <td><%= scheduled_post.content %></td>
+    <td><%= scheduled_post.reenactment_id %></td>
+    <td><%= scheduled_post.character_id %></td>
+    <td><%= scheduled_post.postdate %></td>
+    <td><%= link_to 'Show', scheduled_post %></td>
+    <td><%= link_to 'Edit', edit_scheduled_post_path(scheduled_post) %></td>
+    <td><%= link_to 'Destroy', scheduled_post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scheduled post', new_scheduled_post_path %>
